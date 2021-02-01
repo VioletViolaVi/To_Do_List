@@ -1,0 +1,7 @@
+$universalMarginAndPadding: 0em;
+$removeBulletPoints: none;
+
+* {
+  margin: $universalMarginAndPadding;
+  list-style: $removeBulletPoints;
+}
