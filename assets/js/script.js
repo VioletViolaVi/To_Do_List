@@ -1,59 +1,40 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // add btn, <ul> container & task <input> field
   let addBtn = document.getElementById("addBtn");
-  let addedTask = document.createElement("li");
+  let taskList = document.getElementById("tasksContainer");
+  let taskInputField = document.getElementById("addTaskInputField");
 
-  // adds task, tick box and bin btn
   addBtn.addEventListener("click", function () {
-    let taskList = document.getElementById("tasksContainer");
-    let taskInputField = document.getElementById("addTaskInput");
+    // EMPTY <li>, <input> & bin icons added as created one by one
+    let addedTask = document.createElement("li");
+    let addedTickBox = document.createElement("input");
+    addedTickBox.setAttribute("type", "checkbox");
+    let binIcon = document.createElement("i");
+    binIcon.className = "far fa-trash-alt";
 
-    // adds task
-    function addTaskText() {
-      addedTask.innerText = taskInputField.value;
-      taskList.appendChild(addedTask);
-    }
-    addTaskText();
+    // TEXT, check boxes & bin icons created
+    addedTask.innerText = taskInputField.value;
+    taskList.appendChild(addedTask);
+    taskList.appendChild(addedTickBox);
+    taskList.appendChild(binIcon);
 
-    // adds tick box
-    function addTickBox() {
-      let addTickBox = document.createElement("input");
-      addTickBox.className = "to_tick";
-      addTickBox.setAttribute("type", "checkbox");
-      addedTask.appendChild(addTickBox);
-      lineThrough();
-    }
-    addTickBox();
+    // clears task <input> field once task's added
+    taskInputField.value = "";
 
-    // adds bin btn
-    function addBinBtn() {
-      let binBtn = document.createElement("i");
-      binBtn.className = "far fa-trash-alt";
-      addedTask.appendChild(binBtn);
-    }
-    addBinBtn();
-
-    // clears input field
-    function clearInputField() {
-      taskInputField.value = "";
-    }
-    clearInputField();
-  });
-
-  // crosses out tasks
-  function lineThrough() {
-    let tickBox = document.querySelector(".to_tick");
-
-    tickBox.addEventListener("click", function () {
-      if (tickBox.checked == true) {
+    // crosses out tasks
+    addedTickBox.addEventListener("click", function () {
+      if (this.checked === true) {
         addedTask.style.textDecoration = "line-through";
       } else {
         addedTask.style.textDecoration = "none";
       }
     });
-  }
 
-
-
-
-
+    // deletes tasks individually
+    binIcon.addEventListener("click", function () {
+      taskList.removeChild(addedTask);
+      taskList.removeChild(addedTickBox);
+      taskList.removeChild(binIcon);
+    });
+  });
 });
