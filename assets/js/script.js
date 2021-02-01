@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let taskInputField = document.getElementById("addTaskInput");
 
   addBtn.addEventListener("click", function () {
+      
     let addedTask = document.createElement("li");
 
     function addTaskText() {
@@ -19,10 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     addTickBox();
 
-    // function addDeleteBox() {
-    //     let deleteBox = document.createElement("")
-    // }
-    // addDeleteBox();
+    function addDeleteBtn() {
+        let deleteBtn = document.createElement("i");
+        deleteBtn.className = "far fa-trash-alt";
+        addedTask.appendChild(deleteBtn);
+    }
+    addDeleteBtn();
 
     function clearInputField() {
       taskInputField.value = "";
