@@ -12,14 +12,16 @@ document.addEventListener("DOMContentLoaded", function () {
     let binIcon = document.createElement("i");
     binIcon.className = "far fa-trash-alt";
 
-    // TEXT, check boxes & bin icons created
-    addedTask.innerText = taskInputField.value;
-    taskList.appendChild(addedTask);
-    taskList.appendChild(addedTickBox);
-    taskList.appendChild(binIcon);
+    if (taskInputField.value !== "") {
+      // TEXT, check boxes & bin icons created
+      addedTask.innerText = taskInputField.value;
+      taskList.appendChild(addedTask);
+      taskList.appendChild(addedTickBox);
+      taskList.appendChild(binIcon);
 
-    // clears task <input> field once task's added
-    taskInputField.value = "";
+      // clears task <input> field once task's added
+      taskInputField.value = "";
+    }
 
     // crosses out tasks
     addedTickBox.addEventListener("click", function () {
