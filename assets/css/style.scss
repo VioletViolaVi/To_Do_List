@@ -1,7 +1,9 @@
-$universalMarginAndPadding: 0em;
-$removeBulletPoints: none;
+$marginAndPaddingRemoval: 0em;
+$bulletPointRemoval: none;
+$fontStyleType: 'Indie Flower', cursive;
 
 * {
-  margin: $universalMarginAndPadding;
-  list-style: $removeBulletPoints;
+  margin: $marginAndPaddingRemoval;
+  list-style: $bulletPointRemoval;
+  font-family: $fontStyleType;
 }
