@@ -10,11 +10,11 @@ This website is for anyone who...
 - As the designer, I want to.... so that I....
 
 ## Small Screens
-![A wireframe image of the to do list on small screens.](/media/wireframes/#)
+![A wireframe image of the to do list on small screens.](/media/wireframes/1.to_do_list-mobile.PNG)
 ## Medium Screens
-![A wireframe image of the to do list on medium screens.](/media/wireframes/#)
+![A wireframe image of the to do list on medium screens.](/media/wireframes/2.to_do_list-tablet.PNG)
 ## Large Screens
-![A wireframe image of the to do list on large screens.](/media/wireframes/#)
+![A wireframe image of the to do list on large screens.](/media/wireframes/3.to_do_list-desktop.PNG)
 
 # Features
 ## Heading
