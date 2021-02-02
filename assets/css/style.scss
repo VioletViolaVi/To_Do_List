@@ -1,7 +1,8 @@
-/************************************************************** repeated */
+// repeated throughout
 $fullNoneRemoval: none;
 $fullZeroRemoval: 0em;
 $centeredContent: center;
+$btnCursor: pointer;
 
 /************************************************************** universal */
 $fontStyleType: "Indie Flower", cursive;
@@ -16,7 +17,7 @@ $mainBgColour: rgb(252, 224, 165);
 }
 
 /************************************************************** title */
-$titleMarginTop: 1em;
+$titleMarginTop: 0.5em;
 $defaultCursor: default;
 $titleSize: 3em;
 
@@ -54,8 +55,7 @@ $btnSize: 2em;
 $btnPosition: absolute;
 $btnRight: 1.1em;
 $btnColour: yellow;
-$btnTop: 4.8em;
-$btnCursor: pointer;
+$btnTop: 4.1em;
 
 #addBtn.fas.fa-plus-circle {
   font-size: $btnSize;
@@ -67,3 +67,42 @@ $btnCursor: pointer;
 }
 
 /************************************************************** task area */
+$taskBoxBorder: solid 0.5em orange;
+$taskBoxWidth: 18em;
+$taskBoxHeight: 25em;
+$taskBoxMargin: 2em auto 0em;
+$taskBoxOverflow: auto;
+
+#tasksContainer {
+  border: $taskBoxBorder;
+  width: $taskBoxWidth;
+  height: $taskBoxHeight;
+  margin: $taskBoxMargin;
+  overflow: $taskBoxOverflow;
+}
+
+/************************************************************** task items */
+$taskItemsSize: 1.9em;
+$taskItemsMargins: auto 0.3em;
+$binColour: red;
+$binMarginLeft:1em;
+$taskItemsBottom: orange solid 0.1em;
+$taskItemsPaddingTop: 0.2em;
+
+.task-items {
+  font-size: $taskItemsSize;
+  margin: $taskItemsMargins;
+  cursor: $defaultCursor;
+}
+
+.far.fa-trash-alt {
+  color: $binColour;
+  margin-left: $binMarginLeft;
+  cursor: $btnCursor;
+}
+
+.task-items hr {
+  border: $fullZeroRemoval;
+  border-bottom: $taskItemsBottom;
+  padding-top: $taskItemsPaddingTop;
+}

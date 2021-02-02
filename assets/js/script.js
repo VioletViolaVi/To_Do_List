@@ -5,38 +5,35 @@ document.addEventListener("DOMContentLoaded", function () {
   let taskInputField = document.getElementById("addTaskInputField");
 
   addBtn.addEventListener("click", function () {
-    // EMPTY <li>, <input> & bin icons added as created one by one
+    // EMPTY <li> & contents added as created one by one
     let addedTask = document.createElement("li");
-    let addedTickBox = document.createElement("input");
-    addedTickBox.setAttribute("type", "checkbox");
+    addedTask.className = "task-items";
     let binIcon = document.createElement("i");
     binIcon.className = "far fa-trash-alt";
+    let divider = document.createElement("hr");
 
     if (taskInputField.value !== "") {
-      // TEXT, check boxes & bin icons created
+      // TEXT, <li> & contents created
       addedTask.innerText = taskInputField.value;
       taskList.appendChild(addedTask);
-      taskList.appendChild(addedTickBox);
-      taskList.appendChild(binIcon);
-
+      addedTask.appendChild(binIcon);
+      addedTask.appendChild(divider);
       // clears task <input> field once task's added
       taskInputField.value = "";
     }
 
     // crosses out tasks
-    addedTickBox.addEventListener("click", function () {
-      if (this.checked === true) {
-        addedTask.style.textDecoration = "line-through";
-      } else {
+    addedTask.addEventListener("click", function () {
+      if (this.style.textDecoration === "line-through") {
         addedTask.style.textDecoration = "none";
+      } else {
+        addedTask.style.textDecoration = "line-through";
       }
     });
 
     // deletes tasks individually
     binIcon.addEventListener("click", function () {
       taskList.removeChild(addedTask);
-      taskList.removeChild(addedTickBox);
-      taskList.removeChild(binIcon);
     });
   });
 });
