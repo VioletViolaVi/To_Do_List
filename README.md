@@ -22,11 +22,16 @@ This website is for anyone who wishes to create a to do list to keep on track on
 
 # Features
 ## Heading
-- 
+- Provides title explaining what the website is and as a result tells users what they are to expect when using the website.
 ## Input Field
-- 
+- Displays “**_Add New Task_**” as its placeholder to inform users this is the area where they are to type their task(s) they wish to add to the to do list.
+- Once tasks are entered, the input field clears and displays only its placeholder text again.
+## Input Field Button
+- When clicked, the task typed in the input field is sent to the box underneath to be displayed. If there's nothing in the input field, then nothing will be sent to the box underneath if this button is clicked.
 ## Task Area
-- 
+- This box area is where the task(s) entered in the input field is/are displayed. They appear with a bin icon. Also, a divider underneath to make the tasks easier to read when there are multiple tasks.
+## Task Contents
+- The tasks entered appear with a bin icon alongside them as well as a divider underneath, separating the different tasks from each other. When the bin icon is clicked, the task written beside it will be deleted. 
 
 # Technologies Used
 ## HTML5
@@ -66,11 +71,26 @@ This website is for anyone who wishes to create a to do list to keep on track on
 
 # Testing
 ## Heading
-- 
+- Using Chrome development tools, open the to do list website at the following different screen sizes: 320x571, 576Xx571, 1200x571 and 1366x571.
+- Ensure the main title can be clearly seen across all these different screen sizes.
 ## Input Field
-- 
+- Using Chrome development tools, open the to do list website at the following different screen sizes: 320x571, 576Xx571, 1200x571 and 1366x571.
+- Ensure the input field and its placeholder text can be clearly seen across all these different screen sizes.
+- Enter the word “**_Test_**” into the input field and ensure the placeholder text disappears; showing only the word “**_Test_**” being typed.  
+## Input Field Button
+- Using Chrome development tools, open the to do list website at the following different screen sizes: 320x571, 576Xx571, 1200x571 and 1366x571.
+- Ensure the input field button can be clearly seen across all these different screen sizes.
+- Press the input field's button with the input filed being empty to ensure nothing is sent to the text box area below.
+- Enter the word “**_Test_**” into the input field and press the button to ensure the word “**_Test_**” is sent to the text box below along with the bin icon beside it.
 ## Task Area
-- 
+- Using Chrome development tools, open the to do list website at the following different screen sizes: 320x571, 576Xx571, 1200x571 and 1366x571.
+- Ensure the task box area can be clearly seen across all these different screen sizes.
+## Task Contents
+- Using Chrome development tools, open the to do list website at the following different screen sizes: 320x571, 576Xx571, 1200x571 and 1366x571.
+- Ensure the task contents can be clearly seen across all these different screen sizes.
+- Enter the word “**_Test_**” into the input field, press the input field's button and check the word “**_Test_**” and its bin icon is legible and both appear.
+- Click on the task's text and ensure when clicked, the task's text is crossed off and when clicked, whilst being crossed off, the line through it disappears.
+- Enter more tasks called “**_Test2_**”, “**_Test3_**” and “**_Test4_**” then click on the bin icon for the task called “**_Test_**” and ensure only this task is deleted from the task area.
 
 # Deployment
 This to do list was deployed following these steps:
