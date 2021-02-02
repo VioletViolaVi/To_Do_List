@@ -1,13 +1,17 @@
 # To Do List
-This is a to do list...
+This is a to do list for adding tasks to be completed; on it. The aim of this project is to produce a website that users can use to create, read, update and delete tasks on a to do list. The tasks are created by typing inside the input field at the top. Afterwards when the plus button is clicked on, the tasks appear in the box underneath, along with a bin icon, to be viewed/read. The tasks can be clicked on to have a line drawn through it, indicating it has been updated and crossed off because it's been completed. The bin icon when clicked, deletes the respective task.
 
 # UX
-This website is for anyone who...
+This website is for anyone who wishes to create a to do list to keep on track on the activities they are due to complete and help organise themselves in achieving such. The website is also accessible to users on different screen sizes to provide flexibility in the device used to access this website. 
 
 ## User stories:
-- As a user, I want to.... so that I....
+- As a user, I want to create a task, so that I can document which activity I need to complete.
+- As a user, I want to cross out a task, so I know which activity I have completed.
+- As a user, I want to delete a completed task, so I know which activity I no longer want to complete.
 ## Designer stories:
-- As the designer, I want to.... so that I....
+- As the designer, I want to add an input field, so users can add tasks they need to complete.
+- As the designer, I want to enable tasks being crossed out, so that users can know which tasks they've completed.
+- As the designer, I want to enable deleting tasks, so users can remove tasks they are no longer interested in completing.
 
 ## Small Screens
 ![A wireframe image of the to do list on small screens.](media/wireframes/1.to_do_list-mobile.PNG)
@@ -30,12 +34,12 @@ This website is for anyone who...
 ## CSS3
 - This to do list used CSS3 to add design to the basic structure and layout of the website.
 ## [SASS](https://sass-lang.com/)
-- This to do list used SASS to organise the added CSS3 design of the website.- 
+- This to do list used SASS to organise the added CSS3 design of the website.
 ## JavaScript
 - This to do list used JavaScript to add functionality to the features of the website.
 ## [Font Awesome](https://fontawesome.com/)
 - This to do list used Font Awesome to provide the icons used in the website.
-## [Google Fonts](https://fonts.google.com/), (https://fonts.google.com/specimen/Indie+Flower?sidebar.open=true&selection.family=Indie+Flower)
+## [Google Fonts](https://fonts.google.com/specimen/Indie+Flower?sidebar.open=true&selection.family=Indie+Flower)
 - This to do list used Google Fonts to provide the font style of the website.
 ## [Chrome Development Tools](https://developers.google.com/web/tools/chrome-devtools)
 - This to do list used Chrome Development Tools to see how responsive the website looked on different screen sizes.
