@@ -1,9 +1,67 @@
-$marginAndPaddingRemoval: 0em;
-$bulletPointRemoval: none;
-$fontStyleType: 'Indie Flower', cursive;
+/************************************************************** repeated */
+$fullNoneRemoval: none;
+$fullZeroRemoval: 0em;
+$centeredContent: center;
+
+/************************************************************** universal */
+$fontStyleType: "Indie Flower", cursive;
+$mainBgColour: rgb(252, 224, 165);
 
 * {
-  margin: $marginAndPaddingRemoval;
-  list-style: $bulletPointRemoval;
   font-family: $fontStyleType;
+  margin: $fullZeroRemoval;
+  padding: $fullZeroRemoval;
+  list-style: $fullNoneRemoval;
+  background-color: $mainBgColour;
+}
+
+/************************************************************** title */
+$titleMarginTop: 1em;
+$defaultCursor: default;
+$titleSize: 3em;
+
+#mainTitle {
+  text-align: $centeredContent;
+  margin-top: $titleMarginTop;
+  cursor: $defaultCursor;
+  font-size: $titleSize;
+}
+
+/************************************************************** input field */
+$inputMarginTop: 2.1em;
+$borderBottom: orange solid 0.2em;
+$borderWidth: 7em;
+$inputSize: 1.5em;
+
+#inputContainer {
+  text-align: $centeredContent;
+  margin-top: $inputMarginTop;
+}
+
+#addTaskInputField {
+  border: $fullZeroRemoval;
+  border-bottom: $borderBottom;
+  width: $borderWidth;
+}
+
+#addTaskInputField {
+  outline: $fullNoneRemoval;
+  font-size: $inputSize;
+}
+
+/************************************************************** input btn */
+$btnSize: 2em;
+$btnPosition: absolute;
+$btnRight: 1.1em;
+$btnColour: yellow;
+$btnTop: 4.8em;
+$btnCursor: pointer;
+
+#addBtn.fas.fa-plus-circle {
+  font-size: $btnSize;
+  position: $btnPosition;
+  right: $btnRight;
+  color: $btnColour;
+  top: $btnTop;
+  cursor: $btnCursor;
 }

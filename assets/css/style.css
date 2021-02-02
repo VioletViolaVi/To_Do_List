@@ -1,6 +1,45 @@
+/************************************************************** repeated */
+/************************************************************** universal */
 * {
-  margin: 0em;
-  list-style: none;
   font-family: "Indie Flower", cursive;
+  margin: 0em;
+  padding: 0em;
+  list-style: none;
+  background-color: #fce0a5;
+}
+
+/************************************************************** title */
+#mainTitle {
+  text-align: center;
+  margin-top: 1em;
+  cursor: default;
+  font-size: 3em;
+}
+
+/************************************************************** input field */
+#inputContainer {
+  text-align: center;
+  margin-top: 2.1em;
+}
+
+#addTaskInputField {
+  border: 0em;
+  border-bottom: orange solid 0.2em;
+  width: 7em;
+}
+
+#addTaskInputField {
+  outline: none;
+  font-size: 1.5em;
+}
+
+/************************************************************** input btn */
+#addBtn.fas.fa-plus-circle {
+  font-size: 2em;
+  position: absolute;
+  right: 1.1em;
+  color: yellow;
+  top: 4.8em;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
