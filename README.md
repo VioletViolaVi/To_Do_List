@@ -3,7 +3,6 @@ This is a to do list for adding tasks to be completed; on it. The aim of this pr
 
 # UX
 This website is for anyone who wishes to create a to do list to keep on track on the activities they are due to complete and help organise themselves in achieving such. The website is also accessible to users on different screen sizes to provide flexibility in the device used to access this website. 
-
 ## User stories:
 - As a user, I want to create a task, so that I can document which activity I need to complete.
 - As a user, I want to cross out a task, so I know which activity I have completed.
@@ -12,7 +11,6 @@ This website is for anyone who wishes to create a to do list to keep on track on
 - As the designer, I want to add an input field, so users can add tasks they need to complete.
 - As the designer, I want to enable tasks being crossed out, so that users can know which tasks they've completed.
 - As the designer, I want to enable deleting tasks, so users can remove tasks they are no longer interested in completing.
-
 ## Small Screens
 ![A wireframe image of the to do list on small screens.](media/wireframes/1.to_do_list-mobile.PNG)
 ## Medium Screens
@@ -101,7 +99,6 @@ This to do list was deployed following these steps:
 5. In the dropdown menu the option called “**_master branch_**” was selected.
 6. After selecting the “**_master branch_**” option, the webpage refreshed automatically and deployed the website.
 7. Finally, the link to this newly deployed website was taken from the “**_GitHub Pages_**” section.
-
 ## Running the code locally
 This to do list was ran locally following these steps:
 1. First enter the list of repositories section of GitHub.
