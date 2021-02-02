@@ -35,10 +35,7 @@
 /************************************************************** input btn */
 #addBtn.fas.fa-plus-circle {
   font-size: 2em;
-  position: absolute;
-  right: 1.1em;
   color: yellow;
-  top: 4.1em;
   cursor: pointer;
 }
 
@@ -68,5 +65,35 @@
   border: 0em;
   border-bottom: orange solid 0.1em;
   padding-top: 0.2em;
+}
+
+/************************************************************** breakpoints */
+@media (min-width: 576px) {
+  /************************************************************** input field */
+  #addTaskInputField {
+    width: 17em;
+  }
+  /************************************************************** task area */
+  #tasksContainer {
+    width: 30em;
+  }
+}
+
+@media (min-width: 1200px) {
+  /************************************************************** input field */
+  #addTaskInputField {
+    width: 15em;
+  }
+  /************************************************************** task area */
+  #tasksContainer {
+    height: 30em;
+  }
+}
+
+@media (min-width: 1366px) {
+  /************************************************************** task area */
+  #tasksContainer {
+    height: 25em;
+  }
 }
 /*# sourceMappingURL=style.css.map */

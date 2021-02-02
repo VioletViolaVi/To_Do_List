@@ -52,17 +52,11 @@ $inputSize: 1.5em;
 
 /************************************************************** input btn */
 $btnSize: 2em;
-$btnPosition: absolute;
-$btnRight: 1.1em;
 $btnColour: yellow;
-$btnTop: 4.1em;
 
 #addBtn.fas.fa-plus-circle {
   font-size: $btnSize;
-  position: $btnPosition;
-  right: $btnRight;
   color: $btnColour;
-  top: $btnTop;
   cursor: $btnCursor;
 }
 
@@ -85,7 +79,7 @@ $taskBoxOverflow: auto;
 $taskItemsSize: 1.9em;
 $taskItemsMargins: auto 0.3em;
 $binColour: red;
-$binMarginLeft:1em;
+$binMarginLeft: 1em;
 $taskItemsBottom: orange solid 0.1em;
 $taskItemsPaddingTop: 0.2em;
 
@@ -105,4 +99,52 @@ $taskItemsPaddingTop: 0.2em;
   border: $fullZeroRemoval;
   border-bottom: $taskItemsBottom;
   padding-top: $taskItemsPaddingTop;
+}
+
+/************************************************************** breakpoints */
+$breakpoints: (
+  "576px": 576px,
+  "1200px": 1200px,
+  "1366px": 1366px,
+);
+
+@media (min-width: map-get($breakpoints, "576px")) {
+  /************************************************************** input field */
+  $inputWidth: 17em;
+
+  #addTaskInputField {
+    width: $inputWidth;
+  }
+
+  /************************************************************** task area */
+  $taskBoxWidth: 30em;
+
+  #tasksContainer {
+    width: $taskBoxWidth;
+  }
+}
+
+@media (min-width: map-get($breakpoints, "1200px")) {
+  /************************************************************** input field */
+  $inputWidth: 15em;
+
+  #addTaskInputField {
+    width: $inputWidth;
+  }
+
+  /************************************************************** task area */
+  $taskBoxHeight: 30em;
+
+  #tasksContainer {
+    height: $taskBoxHeight;
+  }
+}
+
+@media (min-width: map-get($breakpoints, "1366px")) {
+  /************************************************************** task area */
+  $taskBoxHeight: 25em;
+
+  #tasksContainer {
+    height: $taskBoxHeight;
+  }
 }
