@@ -4,21 +4,26 @@ document.addEventListener("DOMContentLoaded", function () {
   let taskList = document.getElementById("tasksContainer");
   let taskInputField = document.getElementById("addTaskInputField");
   let modal = document.getElementById("modal");
-
-
+  let no = document.getElementById("no");
+  let yes = document.getElementById("yes");
 
   addBtn.addEventListener("click", function () {
     // EMPTY <li> & contents added as created one by one
     let addedTask = document.createElement("li");
     addedTask.className = "task-items";
+
+    let textAlone = document.createElement("span");
+
     let binIcon = document.createElement("i");
     binIcon.className = "far fa-trash-alt";
+
     let divider = document.createElement("hr");
 
     if (taskInputField.value !== "") {
-      // TEXT, <li> & contents created
-      addedTask.innerText = taskInputField.value;
+      // TEXT, <li>, <span> & contents created
       taskList.appendChild(addedTask);
+      addedTask.appendChild(textAlone);
+      textAlone.innerText = taskInputField.value;
       addedTask.appendChild(binIcon);
       addedTask.appendChild(divider);
       // clears task <input> field once task's added
@@ -26,19 +31,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // crosses out tasks
-    addedTask.addEventListener("click", function () {
+    textAlone.addEventListener("click", function () {
       if (this.style.textDecoration === "line-through") {
-        addedTask.style.textDecoration = "none";
+        textAlone.style.textDecoration = "none";
       } else {
-        addedTask.style.textDecoration = "line-through";
+        textAlone.style.textDecoration = "line-through";
       }
     });
 
-    // deletes tasks individually
+    // confirmation modal
     binIcon.addEventListener("click", function () {
-      // confirmation modal
       modal.style.display = "block";
-      // taskList.removeChild(addedTask);
+    });
+
+    // no btn
+    no.addEventListener("click", function () {
+      // remove modal
+      modal.style.display = "none";
+    });
+
+    // yes btn
+    yes.addEventListener("click", function () {
+      // delete item
+      taskList.removeChild(addedTask);
+      modal.style.display = "none";
     });
   });
 });
