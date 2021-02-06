@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let addBtn = document.getElementById("addBtn");
   let taskList = document.getElementById("tasksContainer");
   let taskInputField = document.getElementById("addTaskInputField");
+  let modal = document.getElementById("modal");
+
+
 
   addBtn.addEventListener("click", function () {
     // EMPTY <li> & contents added as created one by one
@@ -33,7 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // deletes tasks individually
     binIcon.addEventListener("click", function () {
-      taskList.removeChild(addedTask);
+      // confirmation modal
+      modal.style.display = "block";
+      // taskList.removeChild(addedTask);
     });
   });
 });

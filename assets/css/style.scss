@@ -1,8 +1,10 @@
 // repeated throughout
 $fullNoneRemoval: none;
 $fullZeroRemoval: 0em;
+$defaultCursor: default;
 $centeredContent: center;
 $btnCursor: pointer;
+$binAndNoColour: red;
 
 /************************************************************** universal */
 $fontStyleType: "Indie Flower", cursive;
@@ -13,12 +15,14 @@ $mainBgColour: rgb(252, 224, 165);
   margin: $fullZeroRemoval;
   padding: $fullZeroRemoval;
   list-style: $fullNoneRemoval;
+}
+
+body {
   background-color: $mainBgColour;
 }
 
 /************************************************************** title */
 $titleMarginTop: 0.5em;
-$defaultCursor: default;
 $titleSize: 3em;
 
 #mainTitle {
@@ -43,6 +47,7 @@ $inputSize: 1.5em;
   border: $fullZeroRemoval;
   border-bottom: $borderBottom;
   width: $borderWidth;
+  background-color: $mainBgColour;
 }
 
 #addTaskInputField {
@@ -78,7 +83,6 @@ $taskBoxOverflow: auto;
 /************************************************************** task items */
 $taskItemsSize: 1.9em;
 $taskItemsMargins: auto 0.3em;
-$binColour: red;
 $binMarginLeft: 1em;
 $taskItemsBottom: orange solid 0.1em;
 $taskItemsPaddingTop: 0.2em;
@@ -90,7 +94,7 @@ $taskItemsPaddingTop: 0.2em;
 }
 
 .far.fa-trash-alt {
-  color: $binColour;
+  color: $binAndNoColour;
   margin-left: $binMarginLeft;
   cursor: $btnCursor;
 }
@@ -99,6 +103,47 @@ $taskItemsPaddingTop: 0.2em;
   border: $fullZeroRemoval;
   border-bottom: $taskItemsBottom;
   padding-top: $taskItemsPaddingTop;
+}
+
+/************************************************************** modal */
+
+#modal {
+  background-color: rgba(85, 85, 17, 0.233);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  cursor: $defaultCursor;
+}
+
+#modalText {
+  position: absolute;
+  text-align: center;
+  background-color: white;
+  border-radius: 0.5em;
+  top: 6em;
+  height: 7.5em;
+  padding-top: 0.5em;
+}
+
+#no,
+#yes {
+  border-radius: 0.5em;
+  cursor: $btnCursor;
+  font-size: 1.5em;
+  font-weight: 900;
+  margin: 0em 1em;
+  padding: 0.1em;
+}
+
+#no {
+  background-color: $binAndNoColour;
+}
+
+#yes {
+  background-color: green;
 }
 
 /************************************************************** breakpoints */
