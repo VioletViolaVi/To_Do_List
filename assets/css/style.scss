@@ -3,6 +3,8 @@ $fullNoneRemoval: none;
 $fullZeroRemoval: 0em;
 $defaultCursor: default;
 $centeredContent: center;
+$titleMarginTopAndModalBorderRadiusAndModalPaddingTop: 0.5em;
+$inputAndNoYesSize: 1.5em;
 $btnCursor: pointer;
 $binAndNoColour: red;
 
@@ -22,12 +24,11 @@ body {
 }
 
 /************************************************************** title */
-$titleMarginTop: 0.5em;
 $titleSize: 3em;
 
 #mainTitle {
   text-align: $centeredContent;
-  margin-top: $titleMarginTop;
+  margin-top: $titleMarginTopAndModalBorderRadiusAndModalPaddingTop;
   cursor: $defaultCursor;
   font-size: $titleSize;
 }
@@ -36,7 +37,6 @@ $titleSize: 3em;
 $inputMarginTop: 2.1em;
 $borderBottom: orange solid 0.2em;
 $borderWidth: 7em;
-$inputSize: 1.5em;
 
 #inputContainer {
   text-align: $centeredContent;
@@ -52,7 +52,7 @@ $inputSize: 1.5em;
 
 #addTaskInputField {
   outline: $fullNoneRemoval;
-  font-size: $inputSize;
+  font-size: $inputAndNoYesSize;
 }
 
 /************************************************************** input btn */
@@ -106,36 +106,48 @@ $taskItemsPaddingTop: 0.2em;
 }
 
 /************************************************************** modal */
+$modalBgColour: rgba(85, 85, 17, 0.233);
+$fixedModal: fixed;
+$modalLeftAndTop: 0;
+$modalWidthAndHeight: 100%;
+$absoluteTextModal: absolute;
+$modalTextBgColour: white;
+$modalTop: 6em;
+$modalHeight: 7.5em;
+$noYesFontWeight: 900;
+$noYesMargin: 0em 1em;
+$noYesPadding: 0.1em;
+$yesBtnColour: green;
 
 #modal {
-  background-color: rgba(85, 85, 17, 0.233);
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
+  background-color: $modalBgColour;
+  position: $fixedModal;
+  left: $modalLeftAndTop;
+  top: $modalLeftAndTop;
+  width: $modalWidthAndHeight;
+  height: $modalWidthAndHeight;
+  display: $fullNoneRemoval;
   cursor: $defaultCursor;
 }
 
 #modalText {
-  position: absolute;
-  text-align: center;
-  background-color: white;
-  border-radius: 0.5em;
-  top: 6em;
-  height: 7.5em;
-  padding-top: 0.5em;
+  position: $absoluteTextModal;
+  text-align: $centeredContent;
+  background-color: $modalTextBgColour;
+  border-radius: $titleMarginTopAndModalBorderRadiusAndModalPaddingTop;
+  top: $modalTop;
+  height: $modalHeight;
+  padding-top: $titleMarginTopAndModalBorderRadiusAndModalPaddingTop;
 }
 
 #no,
 #yes {
-  border-radius: 0.5em;
+  border-radius: $titleMarginTopAndModalBorderRadiusAndModalPaddingTop;
   cursor: $btnCursor;
-  font-size: 1.5em;
-  font-weight: 900;
-  margin: 0em 1em;
-  padding: 0.1em;
+  font-size: $inputAndNoYesSize;
+  font-weight: $noYesFontWeight;
+  margin: $noYesMargin;
+  padding: $noYesPadding;
 }
 
 #no {
@@ -143,7 +155,7 @@ $taskItemsPaddingTop: 0.2em;
 }
 
 #yes {
-  background-color: green;
+  background-color: $yesBtnColour;
 }
 
 /************************************************************** breakpoints */
