@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // confirmation modal
     binIcon.addEventListener("click", function () {
       modal.style.display = "block";
+      yesBtn();
     });
 
     // no btn
@@ -50,11 +51,13 @@ document.addEventListener("DOMContentLoaded", function () {
       modal.style.display = "none";
     });
 
-    // yes btn
-    yes.addEventListener("click", function () {
-      // delete item
-      taskList.removeChild(addedTask);
-      modal.style.display = "none";
-    });
+    function yesBtn() {
+      // yes btn
+      yes.addEventListener("click", function () {
+        // delete item
+        modal.style.display = "none";
+        taskList.removeChild(addedTask);
+      });
+    }
   });
 });
