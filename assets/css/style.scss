@@ -8,6 +8,8 @@ $inputAndNoYesSize: 1.5em;
 $btnCursor: pointer;
 $binAndNoColour: red;
 $yesAndTickBtnColour: green;
+$btnAndModalTileSize: 2em;
+$taskItemsAndModalTitleSize: 1.9em;
 
 /************************************************************** universal */
 $fontStyleType: "Indie Flower", cursive;
@@ -57,11 +59,10 @@ $borderWidth: 7em;
 }
 
 /************************************************************** input btn */
-$btnSize: 2em;
 $btnColour: orange;
 
 #addBtn.fas.fa-plus-circle {
-  font-size: $btnSize;
+  font-size: $btnAndModalTileSize;
   color: $btnColour;
   cursor: $btnCursor;
 }
@@ -82,13 +83,12 @@ $taskBoxOverflow: auto;
 }
 
 /************************************************************** task items */
-$taskItemsSize: 1.9em;
 $taskItemsMargins: auto 0.3em;
 $taskItemsBottom: orange solid 0.1em;
 $taskItemsPaddingTop: 0.2em;
 
 .task-items {
-  font-size: $taskItemsSize;
+  font-size: $taskItemsAndModalTitleSize;
   margin: $taskItemsMargins;
   cursor: $defaultCursor;
 }
@@ -117,10 +117,11 @@ $modalWidthAndHeight: 100%;
 $absoluteTextModal: absolute;
 $modalTextBgColour: white;
 $modalTop: 6em;
-$modalHeight: 7.5em;
+$modalHeight: 9.5em;
 $noYesFontWeight: 900;
 $noYesMargin: 0em 1em;
-$noYesPadding: 0.1em;
+$noYesPadding: 0.3em;
+$yesNoInlineBlock: inline-block;
 
 #modal {
   background-color: $modalBgColour;
@@ -141,6 +142,11 @@ $noYesPadding: 0.1em;
   top: $modalTop;
   height: $modalHeight;
   padding-top: $titleMarginTopAndModalBorderRadiusAndModalPaddingTop;
+  width: $modalWidthAndHeight;
+}
+
+#modalText h2 {
+  font-size: $taskItemsAndModalTitleSize;
 }
 
 #no,
@@ -151,6 +157,7 @@ $noYesPadding: 0.1em;
   font-weight: $noYesFontWeight;
   margin: $noYesMargin;
   padding: $noYesPadding;
+  display: $yesNoInlineBlock;
 }
 
 #no {
@@ -164,6 +171,7 @@ $noYesPadding: 0.1em;
 /************************************************************** breakpoints */
 $breakpoints: (
   "576px": 576px,
+  "768px": 768px,
   "1200px": 1200px,
   "1366px": 1366px,
 );
@@ -176,11 +184,38 @@ $breakpoints: (
     width: $inputWidth;
   }
 
+  /************************************************************** modal */
+  $titleMarginTopAndModalBorderRadiusAndModalPaddingTop: 0.5em;
+  $modalHeight: 9.5em;
+  $yesNoMarginTop: 0.8em;
+
+  #modalText {
+    padding-top: $titleMarginTopAndModalBorderRadiusAndModalPaddingTop;
+    height: $modalHeight;
+  }
+
+  #no,
+  #yes {
+    margin-top: $yesNoMarginTop;
+    padding: $titleMarginTopAndModalBorderRadiusAndModalPaddingTop;
+  }
+
   /************************************************************** task area */
   $taskBoxWidth: 30em;
 
   #tasksContainer {
     width: $taskBoxWidth;
+  }
+}
+
+@media (min-width: map-get($breakpoints, "768px")) {
+  /************************************************************** modal */
+  $modalTextWidth: 60%;
+  $modalTextMargin: auto 20%;
+
+  #modalText {
+    width: $modalTextWidth;
+    margin: $modalTextMargin;
   }
 }
 

@@ -93,8 +93,13 @@ body {
   background-color: white;
   border-radius: 0.5em;
   top: 6em;
-  height: 7.5em;
+  height: 9.5em;
   padding-top: 0.5em;
+  width: 100%;
+}
+
+#modalText h2 {
+  font-size: 1.9em;
 }
 
 #no,
@@ -104,7 +109,8 @@ body {
   font-size: 1.5em;
   font-weight: 900;
   margin: 0em 1em;
-  padding: 0.1em;
+  padding: 0.3em;
+  display: inline-block;
 }
 
 #no {
@@ -121,9 +127,27 @@ body {
   #addTaskInputField {
     width: 17em;
   }
+  /************************************************************** modal */
+  #modalText {
+    padding-top: 0.5em;
+    height: 9.5em;
+  }
+  #no,
+  #yes {
+    margin-top: 0.8em;
+    padding: 0.5em;
+  }
   /************************************************************** task area */
   #tasksContainer {
     width: 30em;
+  }
+}
+
+@media (min-width: 768px) {
+  /************************************************************** modal */
+  #modalText {
+    width: 60%;
+    margin: auto 20%;
   }
 }
 
