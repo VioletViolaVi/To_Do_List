@@ -39,7 +39,7 @@ body {
 /************************************************************** input btn */
 #addBtn.fas.fa-plus-circle {
   font-size: 2em;
-  color: yellow;
+  color: orange;
   cursor: pointer;
 }
 
@@ -61,8 +61,12 @@ body {
 
 .far.fa-trash-alt {
   color: red;
-  margin-left: 1em;
   cursor: pointer;
+}
+
+.far.fa-check-square {
+  cursor: pointer;
+  color: green;
 }
 
 .task-items hr {

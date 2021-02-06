@@ -11,12 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // EMPTY <li> & contents added as created one by one
     let addedTask = document.createElement("li");
     addedTask.className = "task-items";
-
     let textAlone = document.createElement("span");
-
+    textAlone.style.marginRight = "1em";
+    let tickIcon = document.createElement("i");
+    tickIcon.className = "far fa-check-square";
+    tickIcon.style.marginRight = "0.5em";
     let binIcon = document.createElement("i");
     binIcon.className = "far fa-trash-alt";
-
     let divider = document.createElement("hr");
 
     if (taskInputField.value !== "") {
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
       taskList.appendChild(addedTask);
       addedTask.appendChild(textAlone);
       textAlone.innerText = taskInputField.value;
+      addedTask.appendChild(tickIcon);
       addedTask.appendChild(binIcon);
       addedTask.appendChild(divider);
       // clears task <input> field once task's added
@@ -31,8 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // crosses out tasks
-    textAlone.addEventListener("click", function () {
-      if (this.style.textDecoration === "line-through") {
+    tickIcon.addEventListener("click", function () {
+      if (textAlone.style.textDecoration === "line-through") {
         textAlone.style.textDecoration = "none";
       } else {
         textAlone.style.textDecoration = "line-through";
